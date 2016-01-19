@@ -22,14 +22,28 @@ $(document).ready(function(){
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+    // console.log(dancer, dancer === makeDancer);
+    if (dancer != makeDancer){
+      $(dancer.$node[0]).addClass(dancerMakerFunctionName);
+      // console.log(dancer.$node[0], dancerMakerFunctionName);
+    }
 
     window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
 
+  $('.lineUp').on('click', function(event){
+    var top = 100;
+    for(var i = 0; i < window.dancers.length; i++) {
+      var node = window.dancers[i];
+      node.setPosition(top, 100);
+      top += 125;
+    };
+  });
+  
 });
