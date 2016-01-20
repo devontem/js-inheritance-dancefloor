@@ -6,17 +6,11 @@ describe("twerkyDancer", function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    twerkyDancer = new makeTwerkyDancer(10, 20, timeBetweenSteps);
+    twerkyDancer = new TwerkyDancer(10, 20, timeBetweenSteps);
   });
 
   it("should have a jQuery $node object", function(){
     expect(twerkyDancer.$node).to.be.an.instanceof(jQuery);
-  });
-
-  it("should have a step function that makes its node blink", function() {
-    sinon.spy(twerkyDancer.$node, 'toggle');
-    twerkyDancer.step();
-    expect(twerkyDancer.$node.toggle.called).to.be.true;
   });
 
   describe("dance", function(){

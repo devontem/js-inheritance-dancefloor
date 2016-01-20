@@ -6,17 +6,11 @@ describe("naenaeDancer", function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    naenaeDancer = new makeNaenaeDancer(10, 20, timeBetweenSteps);
+    naenaeDancer = new NaenaeDancer(10, 20, timeBetweenSteps);
   });
 
   it("should have a jQuery $node object", function(){
     expect(naenaeDancer.$node).to.be.an.instanceof(jQuery);
-  });
-
-  it("should have a step function that makes its node blink", function() {
-    sinon.spy(naenaeDancer.$node, 'toggle');
-    naenaeDancer.step();
-    expect(naenaeDancer.$node.toggle.called).to.be.true;
   });
 
   describe("dance", function(){

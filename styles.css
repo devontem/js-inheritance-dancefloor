@@ -6,9 +6,12 @@ body{
   background-color:#444;
   font-size: 18px;
   font-family: arial black;
+  background-size: cover;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
+  width:100%;
+  height: 100%;
 }
 .title, .actionButton{
   padding:5px 12px;
@@ -26,7 +29,7 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-.makeBlinkyDancer{
+.BlinkyDancer{
   background-image: url('http://www.hey.fr/tools/emoji/ios_emoji_pouting_face.png');
   background-size: 100px 100px;
   width: 100px;
@@ -35,7 +38,7 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-.makeNaenaeDancer {
+.NaenaeDancer {
   background-image: url('https://media.giphy.com/media/3o85xCRhHObVh7eoZW/giphy.gif');
   background-size: 282px 156px;
   width: 282px;
@@ -44,7 +47,7 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-.makeTwerkyDancer {
+.TwerkyDancer {
   background-image: url('http://giantgag.net/wp-content/uploads/2013/12/miley-cyrus-twerky-gif.gif');
   background-size: 200px 200px;
   width: 200px;
@@ -56,8 +59,7 @@ body, a:link, a:visited, a:active{
 
 .button {
   text-decoration: none;
-  margin-right: 50px;
-  margin-left: 50px;
-  
+  margin-right: 20px;
+  margin-left: 60px;
 }
 

@@ -1,5 +1,6 @@
 $(document).ready(function(){
   window.dancers = [];
+  window.background = ['http://www.claireramus.com/wp-content/uploads/2012/03/beaker-muppet3.jpg', 'http://wallpapercave.com/wp/04FoKF7.png', 'https://upload.wikimedia.org/wikipedia/commons/0/05/20100726_Kalamitsi_Beach_Ionian_Sea_Lefkada_island_Greece.jpg', 'https://blog.foundersuite.com/wp-content/uploads/2013/09/hack-reactor.jpg'];
 
   $(".addDancerButton").on("click", function(event){
     /* This function sets up the click handlers for the create-dancer
@@ -27,10 +28,9 @@ $(document).ready(function(){
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
-    // console.log(dancer, dancer === makeDancer);
-    if (dancer != makeDancer){
+    
+    if (dancer != Dancer){
       $(dancer.$node[0]).addClass(dancerMakerFunctionName);
-      // console.log(dancer.$node[0], dancerMakerFunctionName);
     }
 
     window.dancers.push(dancer);
@@ -44,6 +44,17 @@ $(document).ready(function(){
       node.setPosition(top, 100);
       top += 125;
     };
+  });
+  
+  var index = 0;
+  
+  $('.background').on('click', function(event) {
+    $('body').css('background-image', "url(" + window.background[index] +")");
+    if(index === window.background.length - 1) {
+      index = 0;
+    } else {
+      index++; 
+    }
   });
   
 });

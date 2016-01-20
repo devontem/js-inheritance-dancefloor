@@ -1,11 +1,10 @@
-var makeTwerkyDancer = function(top, left, timeBetweenSteps) { 
-  makeDancer.call(this, top, left, timeBetweenSteps);
+var TwerkyDancer = function(top, left, timeBetweenSteps) { 
+  Dancer.call(this, top, left, timeBetweenSteps);
 }
 
-makeTwerkyDancer.prototype = Object.create(makeDancer.prototype);
-makeTwerkyDancer.prototype.constructor = makeTwerkyDancer;
+TwerkyDancer.prototype = Object.create(Dancer.prototype);
+TwerkyDancer.prototype.constructor = TwerkyDancer;
 
-makeTwerkyDancer.prototype.step = function(){
-  makeDancer.prototype.step.call(this);
-  
+TwerkyDancer.prototype.step = function(){
+  Dancer.prototype.step.call(this);
 };
